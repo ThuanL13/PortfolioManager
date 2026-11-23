@@ -6,6 +6,6 @@ public class FinancialAppliction {
         Valuable account2 = new BankAccount(456, "Gary", new BigDecimal("1500"));
 
         account1.deposit(new BigDecimal("100"));
-
+        account2.deposit(new BigDecimal("100"));
     }
 }
