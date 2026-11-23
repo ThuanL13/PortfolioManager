@@ -7,5 +7,9 @@ public class FinancialAppliction {
 
         account1.deposit(new BigDecimal("100"));
 
+
+        System.out.println("Account 1 value $" + account1.getValue());
+        System.out.println("Account 2 value $" + account2.getValue());
+
     }
 }
