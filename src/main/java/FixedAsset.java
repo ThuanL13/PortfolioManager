@@ -1,11 +1,13 @@
+import java.math.BigDecimal;
+
 public abstract class FixedAsset implements Valuable {
     private String name;
-    private double marketValuable;
+    private BigDecimal marketValue;
 
     // Constructor for child classes
-    public FixedAsset(String name, double marketValuable) {
+    public FixedAsset(String name, BigDecimal marketValuable) {
         this.name = name;
-        this.marketValuable = marketValuable;
+        this.marketValue = marketValue;
     }
     // Getters and Setters
 
@@ -17,11 +19,11 @@ public abstract class FixedAsset implements Valuable {
         this.name = name;
     }
 
-    public double getMarketValuable() {
-        return marketValuable;
+    public BigDecimal getMarketValue() {
+        return marketValue;
     }
 
-    public void setMarketValuable(double marketValuable) {
-        this.marketValuable = marketValuable;
+    public void setMarketValue(BigDecimal marketValue) {
+        this.marketValue = marketValue;
     }
 }

@@ -1,27 +1,29 @@
+import java.math.BigDecimal;
+
 public class CreditCard implements Valuable {
     private int accountNumber;
     private String owner;
-    private double balance;
+    private BigDecimal balance;
 
     // Constructor
 
-    public CreditCard(int accountNumber, String owner, double balance) {
+    public CreditCard(int accountNumber, String owner, BigDecimal balance) {
         this.accountNumber = accountNumber;
         this.owner = owner;
         this.balance = balance;
     }
     // Methods for credit card
     // Increases debt
-    public void charge(double amount) {
-        balance += amount;
+    public void charge(BigDecimal amount) {
+        balance = balance.add(amount);
     }
     // Pays debt
-    public void pay(double amount) {
-        balance -= amount;
+    public void pay(BigDecimal amount) {
+        balance = balance.subtract(amount);
     }
     // Debt reduces net worth
     @Override
-    public double getValue() {
-        return -balance;
+    public BigDecimal getValue() {
+        return balance.negate();
     }
 }

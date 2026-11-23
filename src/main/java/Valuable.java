@@ -1,3 +1,5 @@
+import java.math.BigDecimal;
+
 public interface Valuable {
-    double getValue();
+    BigDecimal getValue();
 }

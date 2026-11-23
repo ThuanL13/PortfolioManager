@@ -1,8 +1,10 @@
+import java.math.BigDecimal;
+
 public class Gold extends FixedAsset {
     private double ounces;
 
     // Constructor
-    public Gold(String name, double marketValue, double ounces) {
+    public Gold(String name, BigDecimal marketValue, double ounces) {
         // Calling parent constructor
         super(name, marketValue);
         this.ounces = ounces;
@@ -12,7 +14,7 @@ public class Gold extends FixedAsset {
     }
 
     @Override
-    public double getValue() {
-        return getMarketValuable();
+    public BigDecimal getValue() {
+        return getMarketValue();
     }
 }
